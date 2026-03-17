@@ -1,0 +1,270 @@
+{
+  "metadata": {
+    "script": "sec6_wilson_loop.py",
+    "section": "6.2",
+    "description": "1/2-BPS circular Wilson loop VEV in N=4 SYM conformal vacuum",
+    "formulas": {
+      "finite_N": "<W>_{U(N)} = (1/N) L^1_{N-1}(-lam/(4N)) exp(lam/(8N))",
+      "planar": "<W>_{planar} = (2/sqrt(lam)) I_1(sqrt(lam))"
+    },
+    "timestamp": "2026-03-10T17:20:08.050872",
+    "python_version": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]"
+  },
+  "finite_N_vs_planar": [
+    {
+      "N": 10,
+      "lambda": 1.0,
+      "W_finite_N": 1.1303464889662886,
+      "W_planar": 1.13031820798497,
+      "relative_diff": 2.5020371359840686e-05
+    },
+    {
+      "N": 10,
+      "lambda": 10.0,
+      "W_finite_N": 2.899686194170846,
+      "W_planar": 2.8941043158779847,
+      "relative_diff": 0.0019287066683247771
+    },
+    {
+      "N": 10,
+      "lambda": 100.0,
+      "W_finite_N": 583.5707925256681,
+      "W_planar": 534.1976607402509,
+      "relative_diff": 0.09242483712302245
+    },
+    {
+      "N": 50,
+      "lambda": 1.0,
+      "W_finite_N": 1.1303193392158981,
+      "W_planar": 1.13031820798497,
+      "relative_diff": 1.0008074894756162e-06
+    },
+    {
+      "N": 50,
+      "lambda": 10.0,
+      "W_finite_N": 2.8943274483159622,
+      "W_planar": 2.8941043158779847,
+      "relative_diff": 7.709896175938848e-05
+    },
+    {
+      "N": 50,
+      "lambda": 100.0,
+      "W_finite_N": 536.1018114690253,
+      "W_planar": 534.1976607402509,
+      "relative_diff": 0.0035645059286403403
+    },
+    {
+      "N": 100,
+      "lambda": 1.0,
+      "W_finite_N": 1.1303184907926376,
+      "W_planar": 1.13031820798497,
+      "relative_diff": 2.5020181530182566e-07
+    },
+    {
+      "N": 100,
+      "lambda": 10.0,
+      "W_finite_N": 2.8941600978730535,
+      "W_planar": 2.8941043158779847,
+      "relative_diff": 1.9274355372333925e-05
+    },
+    {
+      "N": 100,
+      "lambda": 100.0,
+      "W_finite_N": 534.6731573811795,
+      "W_planar": 534.1976607402509,
+      "relative_diff": 0.0008901136711638921
+    },
+    {
+      "N": 500,
+      "lambda": 1.0,
+      "W_finite_N": 1.1303182192972774,
+      "W_planar": 1.13031820798497,
+      "relative_diff": 1.0008073154259383e-08
+    },
+    {
+      "N": 500,
+      "lambda": 10.0,
+      "W_finite_N": 2.894106547143521,
+      "W_planar": 2.8941043158779847,
+      "relative_diff": 7.709692854168766e-07
+    },
+    {
+      "N": 500,
+      "lambda": 100.0,
+      "W_finite_N": 534.2166736865573,
+      "W_planar": 534.1976607402509,
+      "relative_diff": 3.559159409295855e-05
+    },
+    {
+      "N": 1000,
+      "lambda": 1.0,
+      "W_finite_N": 1.1303182108130476,
+      "W_planar": 1.13031820798497,
+      "relative_diff": 2.5020189270089236e-09
+    },
+    {
+      "N": 1000,
+      "lambda": 10.0,
+      "W_finite_N": 2.8941048736942596,
+      "W_planar": 2.8941043158779847,
+      "relative_diff": 1.9274228364482396e-07
+    },
+    {
+      "N": 1000,
+      "lambda": 100.0,
+      "W_finite_N": 534.202413922782,
+      "W_planar": 534.1976607402509,
+      "relative_diff": 8.89779735183266e-06
+    }
+  ],
+  "planar_scan": [
+    {
+      "lambda": 0.01,
+      "sqrt_lambda": 0.1,
+      "W_vev": 1.001250520941854,
+      "nonzero": true
+    },
+    {
+      "lambda": 0.1,
+      "sqrt_lambda": 0.31622776601683794,
+      "W_vev": 1.0125521919760243,
+      "nonzero": true
+    },
+    {
+      "lambda": 0.5,
+      "sqrt_lambda": 0.7071067811865476,
+      "W_vev": 1.0638157318267056,
+      "nonzero": true
+    },
+    {
+      "lambda": 1.0,
+      "sqrt_lambda": 1.0,
+      "W_vev": 1.13031820798497,
+      "nonzero": true
+    },
+    {
+      "lambda": 2.0,
+      "sqrt_lambda": 1.4142135623730951,
+      "W_vev": 1.271723456312137,
+      "nonzero": true
+    },
+    {
+      "lambda": 5.0,
+      "sqrt_lambda": 2.23606797749979,
+      "W_vev": 1.769655808269659,
+      "nonzero": true
+    },
+    {
+      "lambda": 10.0,
+      "sqrt_lambda": 3.1622776601683795,
+      "W_vev": 2.8941043158779847,
+      "nonzero": true
+    },
+    {
+      "lambda": 20.0,
+      "sqrt_lambda": 4.47213595499958,
+      "W_vev": 6.7092902907288705,
+      "nonzero": true
+    },
+    {
+      "lambda": 50.0,
+      "sqrt_lambda": 7.0710678118654755,
+      "W_vev": 47.17641579445873,
+      "nonzero": true
+    },
+    {
+      "lambda": 100.0,
+      "sqrt_lambda": 10.0,
+      "W_vev": 534.1976607402509,
+      "nonzero": true
+    },
+    {
+      "lambda": 200.0,
+      "sqrt_lambda": 14.142135623730951,
+      "W_vev": 20233.363403482686,
+      "nonzero": true
+    }
+  ],
+  "weak_coupling_check": [
+    {
+      "lambda": 0.001,
+      "exact": 1.0001250052084418,
+      "approx": 1.0001250052083333,
+      "relative_error": 1.085662404628215e-13
+    },
+    {
+      "lambda": 0.005,
+      "exact": 1.0006251302218976,
+      "approx": 1.0006251302083333,
+      "relative_error": 1.3555786693716473e-11
+    },
+    {
+      "lambda": 0.01,
+      "exact": 1.001250520941854,
+      "approx": 1.0012505208333333,
+      "relative_error": 1.083852099685773e-10
+    },
+    {
+      "lambda": 0.05,
+      "exact": 1.006263034405182,
+      "approx": 1.0062630208333334,
+      "relative_error": 1.3487376630030284e-08
+    },
+    {
+      "lambda": 0.1,
+      "exact": 1.0125521919760243,
+      "approx": 1.0125520833333332,
+      "relative_error": 1.0729589242573018e-07
+    }
+  ],
+  "strong_coupling_check": [
+    {
+      "lambda": 20.0,
+      "exact": 6.7092902907288705,
+      "asymptotic": 7.385697776669299,
+      "ratio": 0.9084165766872923
+    },
+    {
+      "lambda": 50.0,
+      "exact": 47.17641579445873,
+      "asymptotic": 49.96182456713368,
+      "ratio": 0.944249258372616
+    },
+    {
+      "lambda": 100.0,
+      "exact": 534.1976607402509,
+      "asymptotic": 555.7569219204146,
+      "ratio": 0.9612073906238255
+    },
+    {
+      "lambda": 200.0,
+      "exact": 20233.363403482686,
+      "asymptotic": 20797.87810234369,
+      "ratio": 0.9728571012829723
+    },
+    {
+      "lambda": 500.0,
+      "exact": 38139888.95640819,
+      "asymptotic": 38800059.90503561,
+      "ratio": 0.9829853110989207
+    }
+  ],
+  "positivity_analytic": {
+    "statement": "I_1(z) > 0 for all z > 0 (standard property of modified Bessel function)",
+    "implication": "lambda > 0 => sqrt(lambda) > 0 => I_1(sqrt(lambda)) > 0 => <W> > 0",
+    "conclusion": "<W(C_circle)> > 0 for all lambda > 0, analytically proven"
+  },
+  "structural_analysis": {
+    "vanishing_theorem_applies": false,
+    "reason": [
+      "W(C) is non-local: depends on contour C, not a single point x",
+      "W(C) is dimensionless: no scaling dimension Delta > 0",
+      "Contour C provides geometric data that absorbs scaling",
+      "Conformal symmetry maps circles to circles: <W> = f(lambda, N)"
+    ],
+    "classification": "probe-response (defect type), not intrinsic bias",
+    "key_result": "<W(C)> > 0 for all lambda > 0 in the symmetric vacuum",
+    "gauge_group_note": "Exact formula is standard for U(N); planar limit is identical for SU(N)",
+    "euclidean_note": "Wilson loop defined on Euclidean R^4 via Wick rotation"
+  }
+}

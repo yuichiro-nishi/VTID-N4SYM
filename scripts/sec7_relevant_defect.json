@@ -1,0 +1,244 @@
+{
+  "metadata": {
+    "script": "sec7_relevant_defect.py",
+    "section": "7.2",
+    "description": "Relevant deformation × defect layer: conformal perturbation theory for Wilson loop response. Shows δlog⟨W(C_R)⟩ ~ λ R^{4-Δ}, establishing δE^defect ≠ 0.",
+    "key_formula": "δlog⟨W(C_R)⟩_ren = -λ a_O G(Δ) R^{4-Δ}",
+    "timestamp": "2026-03-11T01:31:07.842665",
+    "python_version": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]"
+  },
+  "geometric_factor": [
+    {
+      "Delta": 1.0,
+      "G_Delta": 19.739208802178716,
+      "scaling_exponent": 3.0,
+      "UV_behavior": "finite",
+      "note": "δlog⟨W⟩ ~ λ R^{3.0}"
+    },
+    {
+      "Delta": 1.5,
+      "G_Delta": 18.610304532370343,
+      "scaling_exponent": 2.5,
+      "UV_behavior": "finite",
+      "note": "δlog⟨W⟩ ~ λ R^{2.5}"
+    },
+    {
+      "Delta": 2.0,
+      "G_Delta": 19.739208802178716,
+      "scaling_exponent": 2.0,
+      "UV_behavior": "finite",
+      "note": "δlog⟨W⟩ ~ λ R^{2.0}"
+    },
+    {
+      "Delta": 2.5,
+      "G_Delta": 27.915456798555514,
+      "scaling_exponent": 1.5,
+      "UV_behavior": "finite",
+      "note": "δlog⟨W⟩ ~ λ R^{1.5}"
+    },
+    {
+      "Delta": 3.0,
+      "G_Delta": 9.869604401089358,
+      "scaling_exponent": 1.0,
+      "UV_behavior": "logarithmic",
+      "note": "δlog⟨W⟩ ~ λ R^{1.0} × ln(R/ε)"
+    },
+    {
+      "Delta": 3.5,
+      "G_Delta": -13.957728399277757,
+      "scaling_exponent": 0.5,
+      "UV_behavior": "power divergent (renormalizable)",
+      "note": "δlog⟨W⟩ ~ λ R^{0.5}"
+    }
+  ],
+  "scaling_verification": [
+    {
+      "Delta": 2.0,
+      "expected_exponent": 2.0,
+      "fitted_exponent": 1.9999999999999996,
+      "match": true,
+      "scan_sample": [
+        {
+          "R": 0.1,
+          "delta_log_W": -0.001973920880217872,
+          "R_power": 0.010000000000000002
+        },
+        {
+          "R": 1.0826367338740546,
+          "delta_log_W": -0.23136371988526777,
+          "R_power": 1.1721022975334805
+        },
+        {
+          "R": 11.721022975334806,
+          "delta_log_W": -27.1181947643415,
+          "R_power": 137.3823795883264
+        }
+      ]
+    },
+    {
+      "Delta": 3.0,
+      "expected_exponent": 1.0,
+      "fitted_exponent": 0.9999999999999998,
+      "match": true,
+      "scan_sample": [
+        {
+          "R": 0.1,
+          "delta_log_W": -0.00986960440108936,
+          "R_power": 0.1
+        },
+        {
+          "R": 1.0826367338740546,
+          "delta_log_W": -0.10685196273424379,
+          "R_power": 1.0826367338740546
+        },
+        {
+          "R": 11.721022975334806,
+          "delta_log_W": -1.156818599426339,
+          "R_power": 11.721022975334806
+        }
+      ]
+    },
+    {
+      "Delta": 3.5,
+      "expected_exponent": 0.5,
+      "fitted_exponent": 0.4999999999999997,
+      "match": true,
+      "scan_sample": [
+        {
+          "R": 0.1,
+          "delta_log_W": 0.04413821270373381,
+          "R_power": 0.31622776601683794
+        },
+        {
+          "R": 1.0826367338740546,
+          "delta_log_W": 0.14522992815993047,
+          "R_power": 1.0404983103657854
+        },
+        {
+          "R": 11.721022975334806,
+          "delta_log_W": 0.4778565044060868,
+          "R_power": 3.423597957607582
+        }
+      ]
+    }
+  ],
+  "numerical_crosscheck": [
+    {
+      "Delta": 1.5,
+      "epsilon_uv": 0.01,
+      "R": 1.0,
+      "I_analytic": 8.369202829163209,
+      "I_numerical": 8.369202829163015,
+      "relative_error": 2.313516585115271e-14,
+      "agreement": true
+    },
+    {
+      "Delta": 2.0,
+      "epsilon_uv": 0.01,
+      "R": 1.0,
+      "I_analytic": 12.440706908215581,
+      "I_numerical": 12.440706908215581,
+      "relative_error": 0.0,
+      "agreement": true
+    },
+    {
+      "Delta": 2.5,
+      "epsilon_uv": 0.01,
+      "R": 1.0,
+      "I_analytic": 22.61946710584651,
+      "I_numerical": 22.61946710584662,
+      "relative_error": 4.86899729014168e-15,
+      "agreement": true
+    }
+  ],
+  "uv_finiteness": [
+    {
+      "Delta": 2.0,
+      "status": "UV finite (converges as ε→0)",
+      "converges": true,
+      "epsilon_scan": [
+        {
+          "epsilon": 1.0,
+          "integral_value": 1776.5287921960844
+        },
+        {
+          "epsilon": 0.1,
+          "integral_value": 1954.181671415693
+        },
+        {
+          "epsilon": 0.01,
+          "integral_value": 1971.9469593376539
+        },
+        {
+          "epsilon": 0.001,
+          "integral_value": 1973.72348812985
+        },
+        {
+          "epsilon": 0.0001,
+          "integral_value": 1973.9011410090695
+        }
+      ]
+    },
+    {
+      "Delta": 3.0,
+      "status": "logarithmic divergence (renormalizable)",
+      "converges": false,
+      "epsilon_scan": [
+        {
+          "epsilon": 1.0,
+          "integral_value": 227.25603967696844
+        },
+        {
+          "epsilon": 0.1,
+          "integral_value": 454.5120793539356
+        },
+        {
+          "epsilon": 0.01,
+          "integral_value": 681.7681190309034
+        },
+        {
+          "epsilon": 0.001,
+          "integral_value": 909.0241587078734
+        },
+        {
+          "epsilon": 0.0001,
+          "integral_value": 1136.280198384839
+        }
+      ]
+    },
+    {
+      "Delta": 3.5,
+      "status": "power divergence (renormalizable; R-dependent part is finite)",
+      "converges": false,
+      "epsilon_scan": [
+        {
+          "epsilon": 1.0,
+          "integral_value": 95.43907128904377
+        },
+        {
+          "epsilon": 0.1,
+          "integral_value": 397.2439143336042
+        },
+        {
+          "epsilon": 0.01,
+          "integral_value": 1351.6346272240442
+        },
+        {
+          "epsilon": 0.001,
+          "integral_value": 4369.683057669647
+        },
+        {
+          "epsilon": 0.0001,
+          "integral_value": 13913.590186574029
+        }
+      ]
+    }
+  ],
+  "physical_summary": {
+    "main_result": "For relevant deformation with Δ < 4, the Wilson loop acquires an R-dependent correction δlog⟨W(C_R)⟩ ~ λ R^{4-Δ}. This demonstrates δE^defect_{ρ₀} ≠ 0: the defect layer responds nontrivially to relevant deformation.",
+    "mechanism": "Relevant deformation introduces IR scale Λ_IR. Conformal perturbation theory gives first-order shift controlled by defect one-point coefficient a_O. The R^{4-Δ} scaling reflects dimensional analysis: [λ] = 4-Δ in mass units.",
+    "matrix_upgrade": "relevant × defect: △ → ✓",
+    "conditions": "Requires nonzero defect one-point coefficient a_O ≠ 0 for the deforming operator. In N=4 SYM, chiral primary operators O_Δ with Δ=2,3 have known nonzero one-point functions in the presence of 1/2-BPS Wilson loop (defect CFT data).",
+    "holographic_interpretation": "On the gravity side, relevant deformation corresponds to a domain wall (RG flow) geometry. The minimal worldsheet for the Wilson loop in this background deviates from the pure AdS result, giving the same R-dependent correction."
+  }
+}

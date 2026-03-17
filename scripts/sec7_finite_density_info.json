@@ -1,0 +1,438 @@
+{
+  "metadata": {
+    "script": "sec7_finite_density_info.py",
+    "section": "7.3",
+    "description": "Finite density × information layer: holographic EE and relative entropy on AdS-RN. Shows δE^info ≠ 0 at finite chemical potential.",
+    "timestamp": "2026-03-11T01:35:15.623547",
+    "python_version": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]"
+  },
+  "thermodynamics": [
+    {
+      "Q_squared": 0.0,
+      "temperature": 0.3183098861837907,
+      "chemical_potential": 0.0,
+      "energy_density": 0.375,
+      "entropy_density": 3.141592653589793,
+      "delta_epsilon": 0.0,
+      "extremal": false
+    },
+    {
+      "Q_squared": 0.2,
+      "temperature": 0.2864788975654116,
+      "chemical_potential": 0.7745966692414834,
+      "energy_density": 0.44999999999999996,
+      "entropy_density": 3.141592653589793,
+      "delta_epsilon": 0.07499999999999996,
+      "extremal": false
+    },
+    {
+      "Q_squared": 0.5,
+      "temperature": 0.238732414637843,
+      "chemical_potential": 1.224744871391589,
+      "energy_density": 0.5625,
+      "entropy_density": 3.141592653589793,
+      "delta_epsilon": 0.1875,
+      "extremal": false
+    },
+    {
+      "Q_squared": 1.0,
+      "temperature": 0.15915494309189535,
+      "chemical_potential": 1.7320508075688772,
+      "energy_density": 0.75,
+      "entropy_density": 3.141592653589793,
+      "delta_epsilon": 0.375,
+      "extremal": false
+    },
+    {
+      "Q_squared": 1.5,
+      "temperature": 0.07957747154594767,
+      "chemical_potential": 2.1213203435596424,
+      "energy_density": 0.9375,
+      "entropy_density": 3.141592653589793,
+      "delta_epsilon": 0.5625,
+      "extremal": false
+    },
+    {
+      "Q_squared": 2.0,
+      "temperature": 0.0,
+      "chemical_potential": 2.449489742783178,
+      "energy_density": 1.125,
+      "entropy_density": 3.141592653589793,
+      "delta_epsilon": 0.75,
+      "extremal": true
+    }
+  ],
+  "first_law_ee": [
+    {
+      "Q_squared": 0.5,
+      "mu": 1.224744871391589,
+      "delta_epsilon": 0.1875,
+      "expected_scaling": 4.0,
+      "fitted_scaling": 3.9999999999999996,
+      "match": true,
+      "scan": [
+        {
+          "R": 0.1,
+          "delta_S_first_law": 9.86960440108936e-05,
+          "delta_K": 9.86960440108936e-05,
+          "scaling_check_R4": 0.9869604401089358
+        },
+        {
+          "R": 0.5,
+          "delta_S_first_law": 0.06168502750680849,
+          "delta_K": 0.06168502750680849,
+          "scaling_check_R4": 0.9869604401089358
+        },
+        {
+          "R": 1.0,
+          "delta_S_first_law": 0.9869604401089358,
+          "delta_K": 0.9869604401089358,
+          "scaling_check_R4": 0.9869604401089358
+        },
+        {
+          "R": 2.0,
+          "delta_S_first_law": 15.791367041742973,
+          "delta_K": 15.791367041742973,
+          "scaling_check_R4": 0.9869604401089358
+        },
+        {
+          "R": 5.0,
+          "delta_S_first_law": 616.8502750680848,
+          "delta_K": 616.8502750680848,
+          "scaling_check_R4": 0.9869604401089357
+        },
+        {
+          "R": 10.0,
+          "delta_S_first_law": 9869.604401089357,
+          "delta_K": 9869.604401089357,
+          "scaling_check_R4": 0.9869604401089357
+        }
+      ]
+    },
+    {
+      "Q_squared": 1.0,
+      "mu": 1.7320508075688772,
+      "delta_epsilon": 0.375,
+      "expected_scaling": 4.0,
+      "fitted_scaling": 4.0,
+      "match": true,
+      "scan": [
+        {
+          "R": 0.1,
+          "delta_S_first_law": 0.0001973920880217872,
+          "delta_K": 0.0001973920880217872,
+          "scaling_check_R4": 1.9739208802178716
+        },
+        {
+          "R": 0.5,
+          "delta_S_first_law": 0.12337005501361697,
+          "delta_K": 0.12337005501361697,
+          "scaling_check_R4": 1.9739208802178716
+        },
+        {
+          "R": 1.0,
+          "delta_S_first_law": 1.9739208802178716,
+          "delta_K": 1.9739208802178716,
+          "scaling_check_R4": 1.9739208802178716
+        },
+        {
+          "R": 2.0,
+          "delta_S_first_law": 31.582734083485946,
+          "delta_K": 31.582734083485946,
+          "scaling_check_R4": 1.9739208802178716
+        },
+        {
+          "R": 5.0,
+          "delta_S_first_law": 1233.7005501361696,
+          "delta_K": 1233.7005501361696,
+          "scaling_check_R4": 1.9739208802178714
+        },
+        {
+          "R": 10.0,
+          "delta_S_first_law": 19739.208802178713,
+          "delta_K": 19739.208802178713,
+          "scaling_check_R4": 1.9739208802178714
+        }
+      ]
+    },
+    {
+      "Q_squared": 2.0,
+      "mu": 2.449489742783178,
+      "delta_epsilon": 0.75,
+      "expected_scaling": 4.0,
+      "fitted_scaling": 3.9999999999999996,
+      "match": true,
+      "scan": [
+        {
+          "R": 0.1,
+          "delta_S_first_law": 0.0003947841760435744,
+          "delta_K": 0.0003947841760435744,
+          "scaling_check_R4": 3.947841760435743
+        },
+        {
+          "R": 0.5,
+          "delta_S_first_law": 0.24674011002723395,
+          "delta_K": 0.24674011002723395,
+          "scaling_check_R4": 3.947841760435743
+        },
+        {
+          "R": 1.0,
+          "delta_S_first_law": 3.947841760435743,
+          "delta_K": 3.947841760435743,
+          "scaling_check_R4": 3.947841760435743
+        },
+        {
+          "R": 2.0,
+          "delta_S_first_law": 63.16546816697189,
+          "delta_K": 63.16546816697189,
+          "scaling_check_R4": 3.947841760435743
+        },
+        {
+          "R": 5.0,
+          "delta_S_first_law": 2467.401100272339,
+          "delta_K": 2467.401100272339,
+          "scaling_check_R4": 3.9478417604357428
+        },
+        {
+          "R": 10.0,
+          "delta_S_first_law": 39478.417604357426,
+          "delta_K": 39478.417604357426,
+          "scaling_check_R4": 3.9478417604357428
+        }
+      ]
+    }
+  ],
+  "strip_width_comparison": [
+    {
+      "Q_squared": 0.0,
+      "mu": 0.0,
+      "scan": [
+        {
+          "r_t": 1.5,
+          "ell_half": 0.4673940351084845,
+          "ell_half_pure_AdS": 0.4673940351084845,
+          "delta_ell_half": 0.0,
+          "relative_change": 0.0
+        },
+        {
+          "r_t": 2.0,
+          "ell_half": 0.3505455263313634,
+          "ell_half_pure_AdS": 0.3505455263313634,
+          "delta_ell_half": 0.0,
+          "relative_change": 0.0
+        },
+        {
+          "r_t": 3.0,
+          "ell_half": 0.23369701755424224,
+          "ell_half_pure_AdS": 0.23369701755424224,
+          "delta_ell_half": 0.0,
+          "relative_change": 0.0
+        },
+        {
+          "r_t": 5.0,
+          "ell_half": 0.14021821053254535,
+          "ell_half_pure_AdS": 0.14021821053254535,
+          "delta_ell_half": 0.0,
+          "relative_change": 0.0
+        },
+        {
+          "r_t": 10.0,
+          "ell_half": 0.07010910526627268,
+          "ell_half_pure_AdS": 0.07010910526627268,
+          "delta_ell_half": 0.0,
+          "relative_change": 0.0
+        }
+      ],
+      "nonzero_change": false
+    },
+    {
+      "Q_squared": 0.5,
+      "mu": 1.224744871391589,
+      "scan": [
+        {
+          "r_t": 1.5,
+          "ell_half": 0.35625897216106117,
+          "ell_half_pure_AdS": 0.4673940351084845,
+          "delta_ell_half": -0.11113506294742331,
+          "relative_change": -0.23777595476080116
+        },
+        {
+          "r_t": 2.0,
+          "ell_half": 0.22973623683601013,
+          "ell_half_pure_AdS": 0.3505455263313634,
+          "delta_ell_half": -0.12080928949535324,
+          "relative_change": -0.34463223867006293
+        },
+        {
+          "r_t": 3.0,
+          "ell_half": 0.1455502391621279,
+          "ell_half_pure_AdS": 0.23369701755424224,
+          "delta_ell_half": -0.08814677839211435,
+          "relative_change": -0.377184010795752
+        },
+        {
+          "r_t": 5.0,
+          "ell_half": 0.08638016606429814,
+          "ell_half_pure_AdS": 0.14021821053254535,
+          "delta_ell_half": -0.053838044468247206,
+          "relative_change": -0.3839590040678142
+        },
+        {
+          "r_t": 10.0,
+          "ell_half": 0.04312300741417095,
+          "ell_half_pure_AdS": 0.07010910526627268,
+          "delta_ell_half": -0.026986097852101723,
+          "relative_change": -0.384915735974795
+        }
+      ],
+      "nonzero_change": true
+    },
+    {
+      "Q_squared": 1.0,
+      "mu": 1.7320508075688772,
+      "scan": [
+        {
+          "r_t": 1.5,
+          "ell_half": 0.37731067311646166,
+          "ell_half_pure_AdS": 0.4673940351084845,
+          "delta_ell_half": -0.09008336199202283,
+          "relative_change": -0.19273536935727908
+        },
+        {
+          "r_t": 2.0,
+          "ell_half": 0.23398090185599738,
+          "ell_half_pure_AdS": 0.3505455263313634,
+          "delta_ell_half": -0.116564624475366,
+          "relative_change": -0.33252349757611765
+        },
+        {
+          "r_t": 3.0,
+          "ell_half": 0.14611913253898695,
+          "ell_half_pure_AdS": 0.23369701755424224,
+          "delta_ell_half": -0.08757788501525529,
+          "relative_change": -0.37474969056859286
+        },
+        {
+          "r_t": 5.0,
+          "ell_half": 0.08642660008629302,
+          "ell_half_pure_AdS": 0.14021821053254535,
+          "delta_ell_half": -0.05379161044625233,
+          "relative_change": -0.3836278486364439
+        },
+        {
+          "r_t": 10.0,
+          "ell_half": 0.043124501141612356,
+          "ell_half_pure_AdS": 0.07010910526627268,
+          "delta_ell_half": -0.02698460412466032,
+          "relative_change": -0.38489443021949077
+        }
+      ],
+      "nonzero_change": true
+    },
+    {
+      "Q_squared": 1.5,
+      "mu": 2.1213203435596424,
+      "scan": [
+        {
+          "r_t": 1.5,
+          "ell_half": 0.4027726285100297,
+          "ell_half_pure_AdS": 0.4673940351084845,
+          "delta_ell_half": -0.06462140659845478,
+          "relative_change": -0.13825894586664084
+        },
+        {
+          "r_t": 2.0,
+          "ell_half": 0.23847625784742318,
+          "ell_half_pure_AdS": 0.3505455263313634,
+          "delta_ell_half": -0.1120692684839402,
+          "relative_change": -0.3196996112225476
+        },
+        {
+          "r_t": 3.0,
+          "ell_half": 0.1466949074975829,
+          "ell_half_pure_AdS": 0.23369701755424224,
+          "delta_ell_half": -0.08700211005665934,
+          "relative_change": -0.3722859237451146
+        },
+        {
+          "r_t": 5.0,
+          "ell_half": 0.08647311086396507,
+          "ell_half_pure_AdS": 0.14021821053254535,
+          "delta_ell_half": -0.05374509966858028,
+          "relative_change": -0.38329614580344235
+        },
+        {
+          "r_t": 10.0,
+          "ell_half": 0.04312599556646677,
+          "ell_half_pure_AdS": 0.07010910526627268,
+          "delta_ell_half": -0.026983109699805906,
+          "relative_change": -0.3848731145166482
+        }
+      ],
+      "nonzero_change": true
+    }
+  ],
+  "relative_entropy": [
+    {
+      "Q_squared": 0.1,
+      "mu": 0.5477225575051662,
+      "delta_epsilon": 0.03750000000000003,
+      "delta_S_first_order": 0.19739208802178732,
+      "delta_K": 0.19739208802178732,
+      "S_rel_first_order": 0.0,
+      "S_rel_second_order_estimate": 0.01948181820680052,
+      "positivity": true
+    },
+    {
+      "Q_squared": 0.5,
+      "mu": 1.224744871391589,
+      "delta_epsilon": 0.1875,
+      "delta_S_first_order": 0.9869604401089358,
+      "delta_K": 0.9869604401089358,
+      "S_rel_first_order": 0.0,
+      "S_rel_second_order_estimate": 0.4870454551700121,
+      "positivity": true
+    },
+    {
+      "Q_squared": 1.0,
+      "mu": 1.7320508075688772,
+      "delta_epsilon": 0.375,
+      "delta_S_first_order": 1.9739208802178716,
+      "delta_K": 1.9739208802178716,
+      "S_rel_first_order": 0.0,
+      "S_rel_second_order_estimate": 1.9481818206800483,
+      "positivity": true
+    },
+    {
+      "Q_squared": 1.5,
+      "mu": 2.1213203435596424,
+      "delta_epsilon": 0.5625,
+      "delta_S_first_order": 2.9608813203268074,
+      "delta_K": 2.9608813203268074,
+      "S_rel_first_order": 0.0,
+      "S_rel_second_order_estimate": 4.383409096530109,
+      "positivity": true
+    },
+    {
+      "Q_squared": 2.0,
+      "mu": 2.449489742783178,
+      "delta_epsilon": 0.75,
+      "delta_S_first_order": 3.947841760435743,
+      "delta_K": 3.947841760435743,
+      "S_rel_first_order": 0.0,
+      "S_rel_second_order_estimate": 7.792727282720193,
+      "positivity": true
+    }
+  ],
+  "physical_summary": {
+    "main_result": "Finite chemical potential μ ≠ 0 produces nonzero changes in information-theoretic quantities: ΔS_{B_R} = (8π²/15) R⁴ Δε(μ), demonstrating δE^info_{ρ₀} ≠ 0.",
+    "three_signals": {
+      "entanglement_entropy": "Ball EE changes by ΔS ~ R⁴ Δε(μ) via entanglement first law. Verified: R⁴ scaling exact.",
+      "relative_entropy": "S(ρ_μ || ρ_0) > 0 at second order, confirming the charged state is distinguishable from vacuum in any ball region.",
+      "strip_ee_holographic": "RT surface in AdS-RN differs from pure AdS: the strip width for same turning point changes with Q, reflecting μ-dependence of holographic EE."
+    },
+    "mechanism": "Chemical potential μ increases the energy density by Δε = (3/8)(Q² r_h⁴) in units of N²/(2π²). Via entanglement first law (exact for ball regions in CFT), this directly translates to ΔS_{B_R} ≠ 0. Holographically, the RT surface in AdS-RN background differs from pure AdS, giving independent confirmation.",
+    "matrix_upgrade": "finite density × info: △ → ✓",
+    "key_formula": "ΔS_{B_R} = (8π²/15) R⁴ Δε(μ),  Δε = (3/8) Q² r_h⁴"
+  }
+}

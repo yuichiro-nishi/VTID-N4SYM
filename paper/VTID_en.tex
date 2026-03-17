@@ -45,7 +45,8 @@
   colorlinks=true,
   linkcolor=blue,
   citecolor=blue,
-  urlcolor=blue
+  urlcolor=blue,
+  linktoc=page
 }
 
 % --- Custom commands ---
@@ -69,71 +70,45 @@
 \date{March 2026}
 
 \begin{abstract}
-We formulate the behavior of 1-point functions in the source-free,
-symmetric vacuum of an exact conformal theory, taking
-$\AdS_5 \times S^5$ and its boundary dual $\N=4$ $SU(N)$ super
-Yang--Mills theory as the reference system.
-As candidates for detecting nontrivial 1-point vacuum data
-we adopt the operator family
-$\Cex = \bigl\{\mathcal{O}_\Delta^a(x),\,
-J_\mu^A(x),\, T_{\mu\nu}(x),\,
-\partial^\mu J_\mu^A(x)\bigr\}$,
-where $\mathcal{O}_\Delta^a$ are local scalar primaries with
-$\Delta>0$, $J_\mu^A$ are conserved currents, and $T_{\mu\nu}$ is
-the energy-momentum tensor.
+We prove that in the source-free, symmetric vacuum of $\N=4$
+$SU(N)$ super Yang--Mills theory, the 1-point functions of all
+operators in the family
+$\Cex$---local scalar primaries, conserved currents, and the
+energy-momentum tensor---vanish identically,
+and that nonzero 1-point functions are permitted only under
+deformations $S = S_{\mathrm{CFT}} + \Delta S_{\mathrm{def}}$.
 
-As the first result, we prove a unified vanishing theorem:
-in the Poincar\'e-invariant, conformally invariant, source-free
-vacuum of $\N=4$ SYM, the 1-point functions of all operators
-in $\Cex$ vanish.
-The individual vanishing results---via boundary Ward identities
-and bulk holographic renormalization---are separately well known;
-the unified formulation for the operator family~$\Cex$ provides
-the basis for the systematic analysis that follows.
-Second, under deformations
-$S = S_{\mathrm{CFT}} + \Delta S_{\mathrm{def}}$---relevant
-deformations, finite temperature, finite chemical potential,
-vacuum selection, time-dependent backgrounds, etc.---we systematize
-the conditions under which $\Cex$-relative nonzero 1-point functions
-are permitted, and identify the deformations for which
-constructive realizations are known.
-The $\Lambda>0$ background fits into this framework as
-a geometric implementation of such deformations.
+This vanishing is sharply confined to local 1-point data.
+Classifying observables into four layers, we show that
+defects, information-theoretic quantities, and higher-point
+correlators carry nontrivial data even in the undeformed vacuum
+(scope-delimitation theorem).
+The $\Lambda>0$ background fits into the deformation framework
+as a geometric implementation.
+Unifying the four-layer classification with the deformation
+analysis, we show that representative deformations trigger
+systematic responses across all four layers
+(layer-resolved response theorem);
+of the $20$ cells in the resulting matrix, $19$ are confirmed
+by literature evidence, explicit computation, or the
+QFT-on-de~Sitter framework.
 
-Third, we examine observables outside $\Cex$---defects
-(Wilson loops, etc.), information-theoretic quantities
-(entanglement entropy, mutual information), and higher-point
-correlators---and classify observables into four layers.
-The vanishing theorem is specific to Layer~I (local 1-point data);
-in the standard example, Layers~II--IV carry nontrivial data
-even in the symmetric vacuum (scope-delimitation theorem).
-Fourth, we unify the four-layer classification with the
-deformation theory and show that representative deformations
-trigger systematic responses across all four layers
-(layer-resolved response theorem).
-Of the $20$ cells formed by representative deformations and
-the four layers, $19$ are supported by literature evidence,
-explicit computation, or the QFT-on-de~Sitter framework.
-
-The arguments throughout rely on established results in quantum
-field theory and the AdS/CFT correspondence;
-the individual ingredients are separately known.
-What is new are structural facts that emerge only from their
-unification:
-the vanishing is sharply confined to Layer~I,
-the deformation response across all four layers is systematic
-rather than ad hoc, and the sole unconfirmed cell
+The individual ingredients are separately known in quantum field
+theory and the AdS/CFT correspondence.
+What is new are structural facts emerging from their unification:
+the vanishing is confined to Layer~I,
+the deformation response is systematic rather than ad hoc,
+and the sole unconfirmed cell
 ($\Lambda>0 \times$ Layer~II) is precisely locatable.
-All theorems are independent of the completeness of~$\Cex$.
 What remains open is not the correctness of the theorems but
-the completeness of the adopted operator family~$\Cex$ and
-its four-layer extension---that is, the \emph{scope} of the
-claims made here.
+the completeness of~$\Cex$ and its four-layer
+extension---that is, the \emph{scope} of the claims made here.
 \keywords{AdS/CFT correspondence, vanishing theorems, 1-point functions,
   conformal field theory, vacuum structure}
 \end{abstract}
 
 \maketitle
+\clearpage
 \tableofcontents
 
 % =====================================================================
@@ -248,6 +223,10 @@ deformation, finite temperature, finite density, Coulomb branch,
 and $\Lambda>0$---trigger systematic responses across all four
 layers (Theorem~\ref{thm:layer-response}, layer-resolved response
 theorem).
+The activation of Layer~I is a deductive consequence of
+Theorem~\ref{thm:nonzero}; the responses in Layers~II--IV
+are confirmed by explicit computations for each
+representative example, not by a general theorem.
 Of the $20$ cells formed by representative deformations and
 the four layers, $19$ are supported by literature evidence,
 explicit computation, or the QFT-on-de~Sitter framework.
@@ -1104,6 +1083,17 @@ Therefore, as long as an operator~$\hat{\mathcal{O}}$ belongs
 to~$\Cex$, the vanishing of its 1-point function is individually
 established.
 
+\begin{remark}\label{rem:divJ-rationale}
+The inclusion of $\partial^\mu J_\mu^A$ in~$\Cex$ is motivated
+by the deformation analysis of Section~\ref{sec:3}:
+while identically zero in the exact conformal theory,
+this operator can acquire a nonzero expectation value under
+anomalous or explicit breaking
+(Proposition~\ref{prop:anomaly}),
+and its inclusion ensures that~$\Cex$ uniformly covers all
+channels that can be activated by deformation.
+\end{remark}
+
 What this paper does \emph{not} show at this stage is the
 completeness of the operator family in the sense that ``all
 operators necessary for nontrivial vacuum data are exhausted
@@ -1607,9 +1597,8 @@ In Section~\ref{sec:2} we showed that the 1-point function of every
 element of the adopted operator family~$\Cex$ vanishes in the
 conformal vacuum of~$\AdS_5\times S^5$ and its boundary
 dual~$\N=4$~SYM\@.
-In Section~\ref{sec:3} we organized how this $\Cex$-relative
-vanishing theorem is lifted by the introduction of a
-deformation~$\Delta S_{\mathrm{def}}$.
+In Section~\ref{sec:3} we organized how
+this vanishing is lifted by deformations~$\Delta S_{\mathrm{def}}$.
 
 The purpose of this section is to apply that general framework
 to~$\Lambda>0$ backgrounds, in particular de~Sitter spacetime.
@@ -1623,14 +1612,17 @@ via a boundary generating functional, the source/response
 dictionary, and the unambiguous treatment of the source-free vacuum
 that were used in AdS/CFT are not implemented in the same form
 for~$\Lambda>0$}~\cite{ref15,ref16,ref17,ref18,ref19,ref20,ref21}.
+The purpose is not to prove new results about de~Sitter
+quantum gravity, but to show that the vanishing-theorem
+framework of this paper systematically identifies where and
+how the assumptions of exact conformal invariance fail.
 
 Below we first organize the difficulties in defining observables on
 de~Sitter backgrounds, then describe the thermal properties arising
 from the Gibbons--Hawking temperature and horizon.
 We subsequently confirm that $H\sim\sqrt{\Lambda}$ acts as an IR
 scale, and finally summarize, in the form of a theorem, how the
-assumptions supporting the $\Cex$-relative vanishing theorem of
-Section~\ref{sec:2} are lost.
+assumptions supporting the vanishing theorem are lost.
 
 % -----------------------------------------------------------------
 \subsection{Observables in de Sitter spacetime}\label{subsec:4-1}
@@ -1947,8 +1939,8 @@ vacuum, and the IR structure.
 
 \begin{proposition}\label{prop:Lambda-breaks}
 $\Delta S_{\Lambda>0}$ breaks at least the following assumptions
-supporting the $\Cex$-relative vanishing theorem of
-Section~\ref{sec:2}: the flat-space implementation of scale
+supporting the vanishing theorem
+(Theorem~\ref{thm:vanishing}): the flat-space implementation of scale
 invariance, the source/response dictionary based on a timelike
 boundary, and the cold-vacuum interpretation for a local observer.
 \end{proposition}
@@ -1974,9 +1966,9 @@ Combining all of the above, the main claim of this section is
 summarized as follows.
 
 \begin{proposition}\label{thm:lambda}
-The $\Cex$-relative vanishing theorem for 1-point functions in
-the source-free, symmetric vacuum established in
-Section~\ref{sec:2} for $\AdS_5\times S^5/\N=4$~SYM does not hold
+The vanishing theorem for 1-point functions in
+the source-free, symmetric vacuum
+(Theorem~\ref{thm:vanishing}) does not hold
 in the same form on a~$\Lambda>0$ background in general.
 More specifically, on a de~Sitter-type background:
 \begin{enumerate}
@@ -2056,9 +2048,8 @@ In Section~\ref{sec:2} we showed that the 1-point function of
 every element of the adopted operator family~$\Cex$ vanishes in
 the source-free, symmetric vacuum of the exact conformal
 theory~$S_{\mathrm{CFT}}$.
-In Section~\ref{sec:3} we organized how this $\Cex$-relative
-vanishing theorem is lifted by the introduction of a
-deformation~$\Delta S_{\mathrm{def}}$.
+In Section~\ref{sec:3} we organized how
+this vanishing is lifted by deformations~$\Delta S_{\mathrm{def}}$.
 In Section~\ref{sec:4} we showed that, on a~$\Lambda>0$
 background---in particular de~Sitter spacetime---the source-free,
 symmetric vacuum structure of~$\AdS_5\times S^5$ is not stably
@@ -2134,11 +2125,6 @@ Theorem~\ref{thm:vanishing}.
 The second from Theorem~\ref{thm:nonzero}.
 The third from Proposition~\ref{thm:lambda}.
 \end{proof}
-
-\begin{remark}\label{rem:unification-scope}
-Theorem~\ref{thm:unification} is $\Cex$-relative
-(see \S\ref{subsec:1-5} and \S\ref{subsec:2-7}).
-\end{remark}
 
 % -----------------------------------------------------------------
 \subsection{%
@@ -2275,8 +2261,7 @@ paper.
 
 \begin{proof}
 By Proposition~\ref{thm:lambda}, the assumptions supporting the
-$\Cex$-relative vanishing theorem of Section~\ref{sec:2} are
-not preserved on a de~Sitter background.
+vanishing theorem are not preserved on a de~Sitter background.
 \end{proof}
 
 \begin{remark}\label{rem:Lambda-not-nonzero}
@@ -2329,11 +2314,6 @@ is permitted.
 The former is the first part of
 Theorem~\ref{thm:unification}, and the latter is its second part.
 \end{proof}
-
-\begin{remark}\label{rem:final-scope}
-This theorem is $\Cex$-relative
-(see \S\ref{subsec:1-5} and \S\ref{subsec:2-7}).
-\end{remark}
 
 % -----------------------------------------------------------------
 \subsection{Physical interpretation}\label{subsec:5-7}
@@ -4164,7 +4144,7 @@ the theoretical maturity of each layer differs.
 % =====================================================================
 \section{Conclusion}\label{sec:8}
 
-In Section~\ref{sec:5} we assembled the $\Cex$-relative
+In Section~\ref{sec:5} we assembled the
 vanishing theorem and the possibility of nonvanishing into the
 unification theorem (Theorem~\ref{thm:unification}).
 In Section~\ref{sec:6} we clarified the scope of the vanishing
@@ -4220,8 +4200,7 @@ responses in 19 out of 20~cells of the
 \subsection{Final claims}\label{subsec:8-2}
 
 In \S\ref{subsec:5-9} we presented the conclusion limited to
-$\Cex$-relative nontrivial 1-point data as two boxed
-propositions.
+$\Cex$-relative 1-point data as two boxed propositions.
 With the results of Sections~\ref{sec:6}--\ref{sec:7}, this
 conclusion is extended to the entire four-layer structure.
 
@@ -4443,6 +4422,16 @@ The author is an independent researcher without institutional
 affiliation.
 The numerical computations in this work were performed with
 standard Python libraries (\texttt{numpy}, \texttt{scipy}).
+
+The author, having no institutional affiliation and no access to
+peer discussion in the relevant field, used AI language models
+(Claude, Anthropic; GPT, OpenAI) as tools for structural feedback on drafts,
+English translation, checking logical consistency, verifying
+arguments, and identifying potential gaps in the manuscript.
+All mathematical content, theorems, proofs, and physical reasoning
+are solely the author's own work.
+Full responsibility for the content of this paper, including any
+errors, rests entirely with the author.
 \end{acknowledgments}
 
 % =====================================================================
@@ -4512,7 +4501,7 @@ constitutes a nonzero example belonging to Layer~II, outside the
 scope of the vanishing theorem.
 
 \noindent\textbf{Script:}
-\texttt{02\_script/sec6\_wilson\_loop.py}.
+\texttt{scripts/sec6\_wilson\_loop.py}.
 
 % -----------------------------------------------------------------
 \subsection{Wilson loop response to relevant deformation
@@ -4564,7 +4553,7 @@ This upgrades the relevant$\times$defect cell of the
 ``deformation~$\times$~layer'' matrix to~$\checkmark$.
 
 \noindent\textbf{Script:}
-\texttt{02\_script/sec7\_relevant\_defect.py}.
+\texttt{scripts/sec7\_relevant\_defect.py}.
 
 % -----------------------------------------------------------------
 \subsection{Information-theoretic layer response at finite density
@@ -4624,7 +4613,7 @@ This upgrades the finite-density$\times$info cell of the matrix
 to~$\checkmark$.
 
 \noindent\textbf{Script:}
-\texttt{02\_script/sec7\_finite\_density\_info.py}.
+\texttt{scripts/sec7\_finite\_density\_info.py}.
 
 % -----------------------------------------------------------------
 \subsection{Correlation layer response at finite density
@@ -4697,7 +4686,7 @@ This upgrades the finite-density$\times$corr cell of the matrix
 to~$\checkmark$.
 
 \noindent\textbf{Script:}
-\texttt{02\_script/sec7\_finite\_density\_corr.py}.
+\texttt{scripts/sec7\_finite\_density\_corr.py}.
 
 % -----------------------------------------------------------------
 \subsection*{Source code location}
@@ -4707,14 +4696,14 @@ to~$\checkmark$.
 \begin{tabular}{lll}
 Computation & Script & Results file \\
 \colrule
-{[Comp.~1]} & \texttt{02\_script/sec6\_wilson\_loop.py}
-  & \texttt{03\_results/sec6\_wilson\_loop.json} \\
-{[Comp.~2]} & \texttt{02\_script/sec7\_relevant\_defect.py}
-  & \texttt{03\_results/sec7\_relevant\_defect.json} \\
-{[Comp.~3]} & \texttt{02\_script/sec7\_finite\_density\_info.py}
-  & \texttt{03\_results/sec7\_finite\_density\_info.json} \\
-{[Comp.~4]} & \texttt{02\_script/sec7\_finite\_density\_corr.py}
-  & \texttt{03\_results/sec7\_finite\_density\_corr.json} \\
+{[Comp.~1]} & \texttt{scripts/sec6\_wilson\_loop.py}
+  & \texttt{scripts/sec6\_wilson\_loop.json} \\
+{[Comp.~2]} & \texttt{scripts/sec7\_relevant\_defect.py}
+  & \texttt{scripts/sec7\_relevant\_defect.json} \\
+{[Comp.~3]} & \texttt{scripts/sec7\_finite\_density\_info.py}
+  & \texttt{scripts/sec7\_finite\_density\_info.json} \\
+{[Comp.~4]} & \texttt{scripts/sec7\_finite\_density\_corr.py}
+  & \texttt{scripts/sec7\_finite\_density\_corr.json} \\
 \end{tabular}
 \end{ruledtabular}
 \end{table}

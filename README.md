@@ -27,10 +27,14 @@ We formulate the behavior of 1-point functions in the source-free, symmetric vac
 │   ├── VTID_en.pdf      # Compiled PDF
 │   └── figures/         # Figures used in the paper
 └── scripts/
-    ├── sec6_wilson_loop.py
-    ├── sec7_finite_density_corr.py
-    ├── sec7_finite_density_info.py
-    └── sec7_relevant_defect.py
+    ├── sec6_wilson_loop.py          # [Comp. 1]
+    ├── sec6_wilson_loop.json        # Results
+    ├── sec7_relevant_defect.py      # [Comp. 2]
+    ├── sec7_relevant_defect.json    # Results
+    ├── sec7_finite_density_info.py  # [Comp. 3]
+    ├── sec7_finite_density_info.json # Results
+    ├── sec7_finite_density_corr.py  # [Comp. 4]
+    └── sec7_finite_density_corr.json # Results
 ```
 
 ## Requirements
